@@ -163,7 +163,7 @@ content.insertAdjacentHTML('afterbegin',
             '<a target="_blank" href="'+ mais_vendidos[produto].link +'"><figure>'+
             '<img src="images/'+ mais_vendidos[produto].src_img +'" alt="Image" class="img-fluid img_m">'+
             '</figure></a>'+
-            '</div><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>'+ mais_vendidos[produto].preco +'</div> </div>');
+            '</div><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>'+ mais_vendidos[produto].preco +'</div> <a href="'+ mais_vendidos[produto].link +'"><div class="btn btn-pumpkin-comprar">compre agora</div></a> </div>');
 }
 
 for(var produto in destaque) {

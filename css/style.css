@@ -130,6 +130,24 @@ h1, h2, h3, h4, h5,
         background: #f16821;
         color: #000; }
 
+  .btn.btn-pumpkin-comprar {
+    border-width: 2px;
+    border-color: #f16821;
+    background: #f16821;
+    color: #fff;
+    width: 100%;
+    padding: 8px 20px; }
+    .btn.btn-pumpkin-comprar:hover {
+      color: #f16821;
+      background-color: transparent; }
+    .btn.btn-pumpkin-comprar.btn-outline-pumpkin {
+      color: #fff;
+      background-color: transparent; }
+      .btn.btn-pumpkin-comprar.btn-outline-white:hover {
+        border-color: #f16821;
+        background: #f16821;
+        color: #000; }
+
 .line-height-1 {
   line-height: 1 !important; }
 
@@ -1708,7 +1726,7 @@ h1, h2, h3, h4, h5,
 }
 
 .preco {
-  color: #B12704!important;
+  color: #f16821!important;
   font-weight: 600;
   font-size: large;
 }
@@ -1743,7 +1761,8 @@ h1, h2, h3, h4, h5,
   background-color: #f5f5f5; }
   .product-item figure {
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    margin-bottom: 0px; }
     .product-item figure:before {
       z-index: 2;
       -webkit-transition: .4s all ease;
