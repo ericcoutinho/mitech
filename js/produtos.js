@@ -72,48 +72,56 @@ var destaque = [
     {   //  Produto 01
         nome: 'Redmi AirDots',
         src_img: 'airDots.png',
-        link: 'https://amzn.to/2walPH9'
+        link: 'https://amzn.to/2walPH9',
+        preco: 'R$00,00'
     },
 
     {   //  Produto 02
         nome: 'Mi band 3',
         src_img: 'mi_band_3.png',
-        link: 'https://amzn.to/39SZqgl'
+        link: 'https://amzn.to/39SZqgl',
+        preco: 'R$119,00'
     },
 
     {   //  Produto 03
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
-        link: 'https://amzn.to/2TSIvVJ'
+        link: 'https://amzn.to/2TSIvVJ',
+        preco: 'R$358,00'
     },
 
     {   //  Produto 04
         nome: 'Amazfit Bip',
         src_img: 'amazfit_bipBranco.png',
-        link: 'https://amzn.to/2TSIQrt'
+        link: 'https://amzn.to/2TSIQrt',
+        preco: 'R$255,00'
     },
     {   //  Produto 05
         nome: 'Redmi AirDots',
         src_img: 'airDots.png',
-        link: 'https://amzn.to/2walPH9'
+        link: 'https://amzn.to/2walPH9',
+        preco: 'R$105,00'
     },
 
     {   //  Produto 06
         nome: 'Mi band 3',
         src_img: 'mi_band_3.png',
-        link: 'https://amzn.to/39SZqgl'
+        link: 'https://amzn.to/39SZqgl',
+        preco: 'R$119,00'
     },
 
     {   //  Produto 07
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
-        link: 'https://amzn.to/2TSIvVJ'
+        link: 'https://amzn.to/2TSIvVJ',
+        preco: 'R$358,00'
     },
 
     {   //  Produto 08
         nome: 'Amazfit Bip',
         src_img: 'amazfit_bipBranco.png',
-        link: 'https://amzn.to/2TSIQrt'
+        link: 'https://amzn.to/2TSIQrt',
+        preco: 'R$255,00'
     }
 ];
 
@@ -174,6 +182,6 @@ content.insertAdjacentHTML('afterbegin',
             '<a target="_blank" href="'+ destaque[produto].link +'"><figure>'+
             '<img src="images/'+ destaque[produto].src_img +'" alt="Image" class="img-fluid img_g">'+
             '</figure></a>'+
-        '</div>'+
+        '</div><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>'+ destaque[produto].preco +'</div> <a href="'+ destaque[produto].link +'"><div class="btn btn-pumpkin-comprar">compre agora</div></a>'+
     ' </div>');
 }
