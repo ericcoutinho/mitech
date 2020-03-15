@@ -1743,8 +1743,7 @@ h1, h2, h3, h4, h5,
   background-color: #f5f5f5; }
   .product-item figure {
     overflow: hidden;
-    position: relative;
-    margin-bottom: 30px; }
+    position: relative; }
     .product-item figure:before {
       z-index: 2;
       -webkit-transition: .4s all ease;
