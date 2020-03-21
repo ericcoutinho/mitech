@@ -1858,7 +1858,7 @@ h1, h2, h3, h4, h5,
     
 @media only screen and (max-width: 767px) {
   .testimonial {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .info-produto { grid-area: info;  }
   .img-produto {  grid-area: img; }
@@ -1876,13 +1876,9 @@ h1, h2, h3, h4, h5,
   }
 
   .slider-container.mb-4 {  margin-bottom: 0rem !important; }
-
   .info-produto h1 {  font-size: 1.5rem;  }
-
   .info-produto p.mb-5 {  margin-bottom: 1rem !important; }
-
   .site-blocks-cover p.lead { font-size: 15px;  }
-
   .align-bottom { position: initial;  }
   .mb-2 { margin-bottom: 0rem !important;  }
 }
