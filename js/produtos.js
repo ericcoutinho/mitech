@@ -9,7 +9,7 @@ var slider_topo = [
                     'Queríamos criar um telefone que mudasse de cor com a elegância de uma pintura impressionista.',
         
         link_secao: 'https://amzn.to/33hhfTI',
-        titulo_secao: 'Smartphone',
+        titulo_secao: 'Smartphones',
 
         link_produto: 'https://amzn.to/2x1GJbx',
         titulo_produto: 'Compre agora',
@@ -25,7 +25,7 @@ var slider_topo = [
                     'Equipado com o processador Qualcomm® Snapdragon™ 730.',
         
         link_secao: 'https://amzn.to/33hhfTI',
-        titulo_secao: 'Smartphone',
+        titulo_secao: 'Smartphones',
 
         link_produto: 'https://amzn.to/2Qg0UJI',
         titulo_produto: 'Compre agora',
@@ -131,8 +131,8 @@ document.getElementById('slider_content').innerHTML +=
 '<!-- inicio produto --> \n'+       
               '<div>\n'+
                 '<div class="testimonial">\n'+
-                  '<div class="row mb-4">\n'+
-                    '<div class="col-md-7">\n'+
+                  '<div class="slider-container row mb-4">\n'+
+                    '<div class="info-produto col-md-7">\n'+
                       '<h1 style="margin-top: 30px;" id="nome_produto">'+ 
                       slider_topo[produto].nome 
                       +'</h1>\n'+
@@ -151,7 +151,7 @@ document.getElementById('slider_content').innerHTML +=
                         +'</a>\n'+
                       '</div>\n'+
                    '</div>\n'+
-                    '<div class="col-md-5">\n'+
+                    '<div class="img-produto col-md-5">\n'+
                       '<img src="images/'+ 
                       slider_topo[produto].src_img 
                       +'"/>\n'+
