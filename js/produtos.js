@@ -34,10 +34,10 @@ var slider_topo = [
     },
     
     {
-        nome: 'REDMI NOTE 8 PRO',
+        nome: 'Redmi Note 8 Pro',
         
         descricao: 'O 1º no Brasil<br>'+
-                    'Câmera selfie de 20MP Modo Retrato IA. Câmera de 64MP quádrupla.<br>'+
+                    'Câmera selfie de 20MP Modo Retrato IA. Câmera de 64MP quádrupla com grande-angular e macro4.<br>'+
                     'Processador Helio G90T feito para Games.',
         
         link_secao: 'https://amzn.to/33hhfTI',
@@ -130,7 +130,7 @@ var destaque = [
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
         link: 'https://amzn.to/2TSIvVJ',
-        preco: 'R$3480,00'
+        preco: 'R$480,00'
     },
 
     {   //  Produto 08
