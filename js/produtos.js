@@ -57,28 +57,28 @@ var mais_vendidos = [
         nome: 'Redmi AirDots',
         src_img: 'airDots.png',
         link: 'https://amzn.to/2walPH9',
-        preco:  'R$105,00'
+        preco:  'R$101,67'
     },
 
     {   //  Produto 02
         nome: 'Mi band 3',
         src_img: 'mi_band_3.png',
         link: 'https://amzn.to/38OPyml',
-        preco:  'R$119,00'
+        preco:  'R$149,00'
     },
 
     {   //  Produto 03
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
         link: 'https://amzn.to/2TSIvVJ',
-        preco:  'R$358,00'
+        preco:  'R$480,00'
     },
 
     {   //  Produto 04
         nome: 'Amazfit Bip',
         src_img: 'amazfit_bipBranco.png',
         link: 'https://amzn.to/2TSIQrt',
-        preco:  'R$255,00'
+        preco:  'R$279,90'
     }
 ];
 
@@ -89,55 +89,55 @@ var destaque = [
         nome: 'Redmi AirDots',
         src_img: 'airDots.png',
         link: 'https://amzn.to/2walPH9',
-        preco: 'R$00,00'
+        preco: 'R$101,67'
     },
 
     {   //  Produto 02
         nome: 'Mi band 3',
         src_img: 'mi_band_3.png',
         link: 'https://amzn.to/39SZqgl',
-        preco: 'R$119,00'
+        preco: 'R$149,00'
     },
 
     {   //  Produto 03
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
         link: 'https://amzn.to/2TSIvVJ',
-        preco: 'R$358,00'
+        preco: 'R$480,00'
     },
 
     {   //  Produto 04
         nome: 'Amazfit Bip',
         src_img: 'amazfit_bipBranco.png',
         link: 'https://amzn.to/2TSIQrt',
-        preco: 'R$255,00'
+        preco: 'R$279,90'
     },
     {   //  Produto 05
         nome: 'Redmi AirDots',
         src_img: 'airDots.png',
         link: 'https://amzn.to/2walPH9',
-        preco: 'R$105,00'
+        preco: 'R$101,67'
     },
 
     {   //  Produto 06
         nome: 'Mi band 3',
         src_img: 'mi_band_3.png',
         link: 'https://amzn.to/39SZqgl',
-        preco: 'R$119,00'
+        preco: 'R$149,00'
     },
 
     {   //  Produto 07
         nome: 'Mi box TV',
         src_img: 'box-s-android-4k-tv-box.png',
         link: 'https://amzn.to/2TSIvVJ',
-        preco: 'R$358,00'
+        preco: 'R$3480,00'
     },
 
     {   //  Produto 08
         nome: 'Amazfit Bip',
         src_img: 'amazfit_bipBranco.png',
         link: 'https://amzn.to/2TSIQrt',
-        preco: 'R$255,00'
+        preco: 'R$279,90'
     }
 ];
 
