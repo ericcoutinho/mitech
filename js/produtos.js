@@ -37,7 +37,7 @@ var slider_topo = [
         nome: 'REDMI NOTE 8 PRO',
         
         descricao: 'O 1º no Brasil<br>'+
-                    'Câmera selfie de 20MP Modo Retrato IA, Câmera de 64MP quádrupla.<br>'+
+                    'Câmera selfie de 20MP Modo Retrato IA. Câmera de 64MP quádrupla.<br>'+
                     'Processador Helio G90T feito para Games.',
         
         link_secao: 'https://amzn.to/33hhfTI',
