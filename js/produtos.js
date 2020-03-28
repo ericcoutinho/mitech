@@ -163,10 +163,10 @@ var produtos = [
 
 let href = window.location.href.split('/').pop();
 href = href.split('.').shift();
-if (href == 'index') {
-   carregaProduto ();
-} else if (href == 'produto') {
+if (href == 'produto') {
     detalheProduto();
+} else {
+    carregaProduto();
 }
     
 function carregaProduto() {
