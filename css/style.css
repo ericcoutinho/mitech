@@ -851,7 +851,8 @@ h1, h2, h3, h4, h5,
 
 .block-13, .slide-one-item {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  margin-top: 2em; }
   .block-13 .owl-nav, .slide-one-item .owl-nav {
     position: relative;
     position: absolute;

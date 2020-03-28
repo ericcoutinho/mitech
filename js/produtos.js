@@ -1,6 +1,7 @@
-//slider topo da página - recomendado +- 6 produtos
-//este array vai construir o banner com base nos produtos cadastrados aqui
-var slider_topo = [
+
+var produtos = [
+    //slider topo da página - recomendado +- 6 produtos
+    //este array vai construir o banner com base nos produtos cadastrados aqui
     {
         nome: 'Mi 8 Lite',
         
@@ -14,7 +15,9 @@ var slider_topo = [
         link_produto: 'https://amzn.to/2x1GJbx',
         titulo_produto: 'Compre agora',
 
-        src_img: 'mi_8_lite.png'
+        src_img: 'mi_8_lite.png',
+        
+        local: 'slider'
     },
 
     {
@@ -30,7 +33,9 @@ var slider_topo = [
         link_produto: 'https://amzn.to/2Qg0UJI',
         titulo_produto: 'Compre agora',
 
-        src_img: 'mi_9t.png'
+        src_img: 'mi_9t.png',
+        
+        local: 'slider'
     },
     
     {
@@ -46,159 +51,245 @@ var slider_topo = [
         link_produto: 'https://amzn.to/3ajc3kO',
         titulo_produto: 'Compre agora',
 
-        src_img: 'note_8_pro1.png'
+        src_img: 'note_8_pro1.png',
+        
+        local: 'slider'
+    },
+
+    //seção mais vendidos - recomendado apenas 4 produtos
+    //este array vai construir a seção com base nos produtos cadastrados aqui
+
+    {   
+        nome: 'Redmi AirDots',
+        descricao: '',
+        src_img: 'airDots.png',
+        link_produto: 'https://amzn.to/2walPH9',
+        preco:  'R$101,67',
+        local: 'mais_vendidos'
+    },
+
+    {   
+        nome: 'Mi band 3',
+        descricao: '',
+        src_img: 'mi_band_3.png',
+        link_produto: 'https://amzn.to/38OPyml',
+        preco:  'R$149,00',
+        local: 'mais_vendidos'
+    },
+
+    {   
+        nome: 'Mi box TV',
+        descricao: '',
+        src_img: 'box-s-android-4k-tv-box.png',
+        link_produto: 'https://amzn.to/2TSIvVJ',
+        preco:  'R$480,00',
+        local: 'mais_vendidos'
+    },
+
+    {   
+        nome: 'Amazfit Bip',
+        descricao: '',
+        src_img: 'amazfit_bipBranco.png',
+        link_produto: 'https://amzn.to/2TSIQrt',
+        preco:  'R$279,90',
+        local: 'mais_vendidos'
+    },
+
+    //seção em destaque
+    //este array vai construir a seção com base nos produtos cadastrados aqui
+    {
+               
+        nome: 'Redmi AirDots',
+        descricao: '',
+        src_img: 'airDots.png',
+        link_produto: 'https://amzn.to/2walPH9',
+        preco: 'R$101,67',
+        local: 'destaque'
+    },
+
+    { 
+        nome: 'Mi band 3',
+        descricao: '',
+        src_img: 'mi_band_3.png',
+        link_produto: 'https://amzn.to/39SZqgl',
+        preco: 'R$149,00',
+        local: 'destaque'
+    },
+
+    {  
+        nome: 'Amazfit Bip',
+        descricao: '',
+        src_img: 'amazfit_bipBranco.png',
+        link_produto: 'https://amzn.to/2TSIQrt',
+        preco: 'R$279,90',
+        local: 'destaque'
+    },
+    { 
+        nome: 'Redmi AirDots',
+        descricao: '',
+        src_img: 'airDots.png',
+        link_produto: 'https://amzn.to/2walPH9',
+        preco: 'R$101,67',
+        local: 'destaque'
+    },
+
+    { 
+        nome: 'Mi band 3',
+        descricao: '',
+        src_img: 'mi_band_3.png',
+        link_produto: 'https://amzn.to/39SZqgl',
+        preco: 'R$149,00',
+        local: 'destaque'
+    },
+
+    { 
+        nome: 'Mi box TV',
+        descricao: '',
+        src_img: 'box-s-android-4k-tv-box.png',
+        link_produto: 'https://amzn.to/2TSIvVJ',
+        preco: 'R$480,00',
+        local: 'destaque'
+    },
+
+    { 
+        nome: 'Amazfit Bip',
+        descricao: '',
+        src_img: 'amazfit_bipBranco.png',
+        link_produto: 'https://amzn.to/2TSIQrt',
+        preco: 'R$279,90',
+        local: 'destaque'
     }
 ];
 
-//seção mais vendidos - recomendado apenas 4 produtos
-//este array vai construir a seção com base nos produtos cadastrados aqui
-var mais_vendidos = [
-    {   //  Produto 01
-        nome: 'Redmi AirDots',
-        src_img: 'airDots.png',
-        link: 'https://amzn.to/2walPH9',
-        preco:  'R$101,67'
-    },
+let href = window.location.href.split('/').pop();
+href = href.split('.').shift();
+if (href == 'index') {
+   carregaProduto ();
+} else if (href == 'produto') {
+    detalheProduto();
+}
+    
+function carregaProduto() {
 
-    {   //  Produto 02
-        nome: 'Mi band 3',
-        src_img: 'mi_band_3.png',
-        link: 'https://amzn.to/38OPyml',
-        preco:  'R$149,00'
-    },
+    for (var produto in produtos) {
 
-    {   //  Produto 03
-        nome: 'Mi box TV',
-        src_img: 'box-s-android-4k-tv-box.png',
-        link: 'https://amzn.to/2TSIvVJ',
-        preco:  'R$480,00'
-    },
-
-    {   //  Produto 04
-        nome: 'Amazfit Bip',
-        src_img: 'amazfit_bipBranco.png',
-        link: 'https://amzn.to/2TSIQrt',
-        preco:  'R$279,90'
+        let local = produtos[produto].local;
+        
+        if (local == 'slider') {
+            document.getElementById('slider_content').innerHTML +=
+    
+            '<!-- inicio produto --> \n' +       
+                '<div>\n' +
+                    '<div class="testimonial">\n'+
+                        '<div class="slider-container row mb-4">\n' +
+                            '<div class="info-produto col-md-7">\n' +
+                                '<h1 style="margin-top: 30px;" id="nome_produto">' + 
+                                    produtos[produto].nome +
+                                '</h1>\n'+
+                                '<p style="margin-top: 30px;" class="mb-5 lead">\n' +
+                                    produtos[produto].descricao +
+                                '</p>\n'+
+                                '<div class="align-bottom">\n' +
+                                    '<a href="'+ 
+                                        produtos[produto].link_secao +
+                                    '" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">' + 
+                                        produtos[produto].titulo_secao +'</a>\n' +
+                                    '<a href="produto.html?top_vendas=' + 
+                                        produtos[produto].link_produto.split('/').pop() +
+                                    '" class="btn btn-pumpkin py-3 px-5 rounded-0 d-block d-sm-inline-block">' + 
+                                        produtos[produto].titulo_produto +
+                                    '</a>\n' +
+                                '</div>\n' +
+                            '</div>\n' +
+                            '<div class="img-produto col-md-5">\n' +
+                                '<img src="images/' + 
+                                    produtos[produto].src_img +
+                                '"/>\n' +
+                            '</div>\n' +
+                        '</div>\n' +                 
+                    '</div>\n' +
+                '</div>\n' +
+            '<!-- fim produto --></div>\n';
+    
+        } else if (local == 'mais_vendidos') {
+            let content = document.getElementById('mais_vendidos');
+            content.insertAdjacentHTML('afterbegin',
+                '<div class="col-lg-3 col-md-6 mb-5">' +
+                    '<div class="product-item">' +
+                        '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
+                        '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_m">' +
+                        '</figure></a>'+
+                    '</div>' +
+                    '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' +
+                    produtos[produto].preco +
+                    '</div>' +
+                    '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
+                    '"><div class="btn btn-pumpkin-comprar">compre agora</div></a>' +
+                '</div>');
+            
+        } else {
+            let content = document.getElementById('destaque');
+            content.insertAdjacentHTML('afterbegin',
+                '<div class="col-lg-4 col-md-6 mb-5">' +
+                    '<div class="product-item">' +
+                        '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
+                        '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_g">' +
+                        '</figure></a>'+
+                    '</div>' +
+                    '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' + 
+                        produtos[produto].preco +
+                    '</div>' + 
+                    '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
+                    '"><div class="btn btn-pumpkin-comprar">compre agora</div></a>' +
+                ' </div>');
+        }
+    
     }
-];
-
-//seção em destaque
-//este array vai construir a seção com base nos produtos cadastrados aqui
-var destaque = [
-    {   //  Produto 01
-        nome: 'Redmi AirDots',
-        src_img: 'airDots.png',
-        link: 'https://amzn.to/2walPH9',
-        preco: 'R$101,67'
-    },
-
-    {   //  Produto 02
-        nome: 'Mi band 3',
-        src_img: 'mi_band_3.png',
-        link: 'https://amzn.to/39SZqgl',
-        preco: 'R$149,00'
-    },
-
-    {   //  Produto 03
-        nome: 'Mi box TV',
-        src_img: 'box-s-android-4k-tv-box.png',
-        link: 'https://amzn.to/2TSIvVJ',
-        preco: 'R$480,00'
-    },
-
-    {   //  Produto 04
-        nome: 'Amazfit Bip',
-        src_img: 'amazfit_bipBranco.png',
-        link: 'https://amzn.to/2TSIQrt',
-        preco: 'R$279,90'
-    },
-    {   //  Produto 05
-        nome: 'Redmi AirDots',
-        src_img: 'airDots.png',
-        link: 'https://amzn.to/2walPH9',
-        preco: 'R$101,67'
-    },
-
-    {   //  Produto 06
-        nome: 'Mi band 3',
-        src_img: 'mi_band_3.png',
-        link: 'https://amzn.to/39SZqgl',
-        preco: 'R$149,00'
-    },
-
-    {   //  Produto 07
-        nome: 'Mi box TV',
-        src_img: 'box-s-android-4k-tv-box.png',
-        link: 'https://amzn.to/2TSIvVJ',
-        preco: 'R$480,00'
-    },
-
-    {   //  Produto 08
-        nome: 'Amazfit Bip',
-        src_img: 'amazfit_bipBranco.png',
-        link: 'https://amzn.to/2TSIQrt',
-        preco: 'R$279,90'
-    }
-];
-
-for (var produto in slider_topo) {
-document.getElementById('slider_content').innerHTML +=
-
-'<!-- inicio produto --> \n'+       
-              '<div>\n'+
-                '<div class="testimonial">\n'+
-                  '<div class="slider-container row mb-4">\n'+
-                    '<div class="info-produto col-md-7">\n'+
-                      '<h1 style="margin-top: 30px;" id="nome_produto">'+ 
-                      slider_topo[produto].nome 
-                      +'</h1>\n'+
-                      '<p style="margin-top: 30px;" class="mb-5 lead">\n'+
-                      slider_topo[produto].descricao
-                      +'</p>\n'+
-                      '<div class="align-bottom">\n'+
-                        '<a href="'+ 
-                        slider_topo[produto].link_secao 
-                        +'" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">'+ 
-                        slider_topo[produto].titulo_secao +'</a>\n'
-                        +'<a href="'+ 
-                        slider_topo[produto].link_produto 
-                        +'" target="_blank" class="btn btn-pumpkin py-3 px-5 rounded-0 d-block d-sm-inline-block">'+ 
-                        slider_topo[produto].titulo_produto 
-                        +'</a>\n'+
-                      '</div>\n'+
-                   '</div>\n'+
-                    '<div class="img-produto col-md-5">\n'+
-                      '<img src="images/'+ 
-                      slider_topo[produto].src_img 
-                      +'"/>\n'+
-                    '</div>\n'+
-                  '</div>\n'+                 
-                '</div>\n'+
-              '</div>\n'+
-              '<!-- fim produto --></div>\n';
-
 }
 
-for(var produto in mais_vendidos) {
-    var content = document.getElementById('mais_vendidos');
-content.insertAdjacentHTML('afterbegin',
-    '<div class="col-lg-3 col-md-6 mb-5">'+
-        '<div class="product-item">'+
-            '<a target="_blank" href="'+ mais_vendidos[produto].link +'"><figure>'+
-            '<img src="images/'+ mais_vendidos[produto].src_img +'" alt="Image" class="img-fluid img_m">'+
-            '</figure></a>'+
-            '</div><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>'+ mais_vendidos[produto].preco +'</div> <a href="'+ mais_vendidos[produto].link +'"><div class="btn btn-pumpkin-comprar">compre agora</div></a> </div>');
-}
+function detalheProduto() {
+    let idProduto = window.location.href.split('=').pop();
 
+    for(var produto in produtos) {
+        let id = produtos[produto].link_produto.split('/').pop();
+        if ( id === idProduto) {
 
-for(var produto in destaque) {
-    var content = document.getElementById('destaque');
-content.insertAdjacentHTML('afterbegin',
-    '<div class="col-lg-4 col-md-6 mb-5">'+
-        '<div class="product-item">'+
-            '<a target="_blank" href="'+ destaque[produto].link +'"><figure>'+
-            '<img src="images/'+ destaque[produto].src_img +'" alt="Image" class="img-fluid img_g">'+
-            '</figure></a>'+
-        '</div><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>'+ destaque[produto].preco +'</div> <a href="'+ destaque[produto].link +'"><div class="btn btn-pumpkin-comprar">compre agora</div></a>'+
-    ' </div>');
+            document.getElementById('product_content').innerHTML +=
+    
+            '<!-- inicio produto --> \n' +       
+                '<div>\n' +
+                    '<div class="testimonial">\n'+
+                        '<div class="slider-container row mb-4">\n' +
+                            '<div class="info-produto col-md-7">\n' +
+                                '<h1 style="margin-top: 30px;" id="nome_produto">' + 
+                                    produtos[produto].nome +
+                                '</h1>\n'+
+                                '<p style="margin-top: 30px;" class="mb-5 lead">\n' +
+                                    produtos[produto].descricao +
+                                '</p>\n'+
+                                '<div class="align-bottom">\n' +
+                                    '<a href="'+ 
+                                        produtos[produto].link_secao +
+                                    '" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">' + 
+                                        produtos[produto].titulo_secao +'</a>\n' +
+                                    '<a href="produto.html?top_vendas=' + 
+                                        produtos[produto].link_produto.split('/').pop() +
+                                    '" class="btn btn-pumpkin py-3 px-5 rounded-0 d-block d-sm-inline-block">' + 
+                                        produtos[produto].titulo_produto +
+                                    '</a>\n' +
+                                '</div>\n' +
+                            '</div>\n' +
+                            '<div class="img-produto col-md-5">\n' +
+                                '<img src="images/' + 
+                                    produtos[produto].src_img +
+                                '"/>\n' +
+                            '</div>\n' +
+                        '</div>\n' +                 
+                    '</div>\n' +
+                '</div>\n' +
+            '<!-- fim produto --></div>\n';
+        }
+        
+    }
+    
 }
