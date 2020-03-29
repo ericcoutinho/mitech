@@ -14,7 +14,7 @@ var produtos = [
         titulo_produto: 'Compre agora',
         src_img: 'mi_8_lite.png',  
         preco: 'R$1.399,00',      
-        local: 'slider'
+        local: 'slider,destaque'
     },
 
     {
@@ -29,7 +29,7 @@ var produtos = [
         titulo_produto: 'Compre agora',
         src_img: 'mi_9t.png', 
         preco:  'R$1.906,14',       
-        local: 'slider'
+        local: 'slider,destaque'
     },
     
     {
@@ -45,7 +45,7 @@ var produtos = [
         titulo_produto: 'Compre agora',
         src_img: 'note_8_pro1.png',
         preco:  'R$1.679,90',        
-        local: 'slider'
+        local: 'slider,destaque'
     },
 
     //seção mais vendidos - recomendado apenas 4 produtos
@@ -123,15 +123,15 @@ function carregaProduto() {
 
     for (var produto in produtos) {
 
-        let local = produtos[produto].local;
+        let local = produtos[produto].local.split(',');
         
-        if (local == 'slider') {
-            topo_slider(produto);
-    
-        } else if (local == 'mais_vendidos') {
-            mais_vendidos(produto);
-            
-        } else {
+        if (local.includes('slider')) {
+            topo_slider(produto);    
+        }
+        if (local.includes('mais_vendidos')) {
+            mais_vendidos(produto);            
+        }
+        if (local.includes('destaque')) {
             destaque(produto);
         }
     
@@ -176,6 +176,7 @@ function topo_slider(produto) {
 }
 
 function mais_vendidos(produto) {
+    
     let content = document.getElementById('mais_vendidos');
     content.insertAdjacentHTML('afterbegin',
         '<div class="col-lg-3 col-md-6 mb-5">' +
