@@ -638,11 +638,19 @@ h1, h2, h3, h4, h5,
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover > .container > .row {
     min-height: 400px;
     height: calc(20vh); }
-  .site-blocks-cover h1 {
+  .container h1 {
     font-size: 2rem;
     font-weight: 400;
     color: #fff;
     font-weight: 900; }
+    h1.detalhe_titulo {
+      color: #414242;
+      font-size: 1.4rem;
+    }
+    .lead {
+      margin-bottom: 1rem;
+    }
+
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
@@ -1222,9 +1230,10 @@ h1, h2, h3, h4, h5,
     .overlap-left {
       margin-left: 0px; } }
 
-.overlap-section {
-  margin-top: -100px; }
+.overlap-section { margin-top: -100px; }
 
+.checked { color: orange; }
+.fa-star { margin: 3px; }
 .feature-1, .free-quote, .feature-3 {
   background: #f16821;
   padding: 30px 50px;
@@ -1875,6 +1884,9 @@ h1, h2, h3, h4, h5,
       'img'
       'info';
   }
+
+  .py-3 { padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important; }
 
   .slider-container.mb-4 {  margin-bottom: 0rem !important; }
   .info-produto h1 {  font-size: 1.5rem;  }
