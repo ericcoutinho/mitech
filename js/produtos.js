@@ -184,8 +184,8 @@ function mais_vendidos(produto) {
                 '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
                 '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_m">' +
                 '</figure></a>'+
-            '</div>' +
-            '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' +
+            '</div><span style="font-size: larger; font-weight: 500; ">' + produtos[produto].nome +
+            '</span><br><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' +
             produtos[produto].preco +
             '</div>' +
             '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
@@ -201,8 +201,8 @@ function destaque(produto) {
                         '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
                         '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_g">' +
                         '</figure></a>'+
-                    '</div>' +
-                    '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' + 
+                    '</div><span style="font-size: larger; font-weight: 500; ">' + produtos[produto].nome +
+                    '</span><br><div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' + 
                         produtos[produto].preco +
                     '</div>' + 
                     '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
