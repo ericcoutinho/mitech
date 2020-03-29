@@ -116,6 +116,8 @@ if (href == 'produto') {
 } else {
     carregaProduto();
 }
+
+
     
 function carregaProduto() {
 
@@ -124,7 +126,20 @@ function carregaProduto() {
         let local = produtos[produto].local;
         
         if (local == 'slider') {
-            document.getElementById('slider_content').innerHTML +=
+            topo_slider(produto);
+    
+        } else if (local == 'mais_vendidos') {
+            mais_vendidos(produto);
+            
+        } else {
+            destaque(produto);
+        }
+    
+    }
+}
+
+function topo_slider(produto) {
+    document.getElementById('slider_content').innerHTML +=
     
             '<!-- inicio produto --> \n' +       
                 '<div>\n' +
@@ -158,25 +173,27 @@ function carregaProduto() {
                     '</div>\n' +
                 '</div>\n' +
             '<!-- fim produto --></div>\n';
-    
-        } else if (local == 'mais_vendidos') {
-            let content = document.getElementById('mais_vendidos');
-            content.insertAdjacentHTML('afterbegin',
-                '<div class="col-lg-3 col-md-6 mb-5">' +
-                    '<div class="product-item">' +
-                        '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
-                        '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_m">' +
-                        '</figure></a>'+
-                    '</div>' +
-                    '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' +
-                    produtos[produto].preco +
-                    '</div>' +
-                    '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
-                    '"><div class="btn btn-pumpkin-comprar">compre agora</div></a>' +
-                '</div>');
-            
-        } else {
-            let content = document.getElementById('destaque');
+}
+
+function mais_vendidos(produto) {
+    let content = document.getElementById('mais_vendidos');
+    content.insertAdjacentHTML('afterbegin',
+        '<div class="col-lg-3 col-md-6 mb-5">' +
+            '<div class="product-item">' +
+                '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +'"><figure>' +
+                '<img src="images/'+ produtos[produto].src_img +'" alt="Image" class="img-fluid img_m">' +
+                '</figure></a>'+
+            '</div>' +
+            '<div class="preco"><span style="color:#6f849a; font-size: small; font-weight:100">Por: </span>' +
+            produtos[produto].preco +
+            '</div>' +
+            '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
+            '"><div class="btn btn-pumpkin-comprar">compre agora</div></a>' +
+        '</div>');
+}
+
+function destaque(produto) {
+    let content = document.getElementById('destaque');
             content.insertAdjacentHTML('afterbegin',
                 '<div class="col-lg-4 col-md-6 mb-5">' +
                     '<div class="product-item">' +
@@ -190,10 +207,8 @@ function carregaProduto() {
                     '<a href="produto.html?id='+ produtos[produto].link_produto.split('/').pop() +
                     '"><div class="btn btn-pumpkin-comprar">compre agora</div></a>' +
                 ' </div>');
-        }
-    
-    }
 }
+
 
 function detalheProduto() {
 
@@ -227,7 +242,7 @@ function detalheProduto() {
                                     produtos[produto].descricao +
                                 '</p>\n'+
                                 '<div class="align-bottom">\n' +
-                                    '<span style="font-size: larger;" class="btn preco py-3 px-5 rounded-0 d-block d-sm-inline-block">'+ produtos[produto].preco +'</span>' +
+                                    '<span style="font-size: xx-large;" class="btn preco py-3 px-5 rounded-0 d-block d-sm-inline-block">'+ produtos[produto].preco +'</span>' +
                                     '<a target="_blank" href="' + 
                                         produtos[produto].link_produto +
                                     '" style="" class="btn btn-pumpkin py-3 px-5 rounded-0 d-block d-sm-inline-block"> Compre agora' +
@@ -239,6 +254,8 @@ function detalheProduto() {
                 '</div>\n' +
             '<!-- fim produto --></div>\n';
         }
+
+        mais_vendidos(produto);
         
     }
     
