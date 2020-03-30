@@ -13,7 +13,7 @@ var produtos = [
         link_produto: 'https://amzn.to/2x1GJbx',
         titulo_produto: 'Compre agora',
         src_img: 'mi_8_lite.png',  
-        preco: 'R$1.399,00',      
+        preco: 'R$1.265,00',      
         local: 'slider,destaque'
     },
 
