@@ -218,7 +218,7 @@ function detalheProduto() {
     for(var produto in produtos) {
         let id = produtos[produto].link_produto.split('/').pop();
         if ( id === idProduto) {
-
+            
             document.getElementById('product_content').innerHTML +=
     
             '<!-- inicio produto --> \n' +       
@@ -241,14 +241,14 @@ function detalheProduto() {
                                 '<span class="fa fa-star checked"></span>' +
                                 '<p class="mb-5 lead">\n' +
                                     produtos[produto].descricao +
-                                '</p><br><br>'+
+                                '</p><br id="mybr">'+
                                 '<div class="align-bottom">\n' +
                                     '<a target="_blank" href="' + 
                                         produtos[produto].link_produto +
                                     '" style="font-size: xx-large;" class="btn preco py-3 px-8 rounded-0 d-block d-sm-inline-block">'+
                                         produtos[produto].preco +'</a>' +
-                                    '<a target="_blank" href="' + 
-                                        produtos[produto].link_produto +
+                                    '<a target="_blank" href="' +  
+                                        produtos[produto].link_produto +                                      
                                     '" class="btn btn-pumpkin py-3 px-5 rounded-0 d-block d-sm-inline-block"> Compre agora' +
                                     '</a>\n' +
                                 '</div>\n' +
@@ -258,11 +258,6 @@ function detalheProduto() {
                 '</div>\n' +
             '<!-- fim produto --></div>\n';
         }
-
-        mais_vendidos(produto);
-        
-    }
-    
-
-    
+        mais_vendidos(produto);        
+    }    
 }

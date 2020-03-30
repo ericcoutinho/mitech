@@ -1232,6 +1232,10 @@ h1, h2, h3, h4, h5,
 
 .overlap-section { margin-top: -100px; }
 
+.amz_logo {
+  height: auto;
+  width: 150px;
+}
 .checked { color: orange; }
 .fa-star { margin: 3px; }
 .feature-1, .free-quote, .feature-3 {
@@ -1866,7 +1870,56 @@ h1, h2, h3, h4, h5,
         font-size: 2rem; } }
     .product-item-2 .product-title-wrap h2 a {
       color: #000; }
-    
+
+      
+      /* The Modal (background) */
+.p_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.p_modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  
+  border: 2px solid #aaa;
+}
+
+/* The Close Button */
+.p_close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.p_close:hover,
+.p_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info-produto br#mybr {   
+  content: "";
+  margin: 9em;
+  display: block;
+  margin-bottom: -20px; 
+}
+
 @media only screen and (max-width: 767px) {
   .testimonial {
     padding-top: 50px;
@@ -1884,6 +1937,18 @@ h1, h2, h3, h4, h5,
     grid-template-areas: 
       'img'
       'info';
+  }
+
+  /* Modal Content */
+  .p_modal-content {
+    width: 90%;
+  }
+
+  .info-produto br#mybr {   
+    content: "";
+    margin: 2em;
+    display: block;
+    margin-bottom: -20px; 
   }
 
   .py-3 { padding-top: 0.5rem!important;
